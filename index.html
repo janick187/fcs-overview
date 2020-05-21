@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>FCS Overview</title>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+      <script type="text/javascript">
+          $(document).ready(function() {
+
+$(".toggle-accordion").on("click", function() {
+  var accordionId = $(this).attr("accordion-id"),
+    numPanelOpen = $(accordionId + ' .collapse.in').length;
+  
+  $(this).toggleClass("active");
+
+  if (numPanelOpen == 0) {
+    openAllPanels(accordionId);
+  } else {
+    closeAllPanels(accordionId);
+  }
+})
+
+openAllPanels = function(aId) {
+  console.log("setAllPanelOpen");
+  $(aId + ' .panel-collapse:not(".in")').collapse('show');
+}
+closeAllPanels = function(aId) {
+  console.log("setAllPanelclose");
+  $(aId + ' .panel-collapse.in').collapse('hide');
+}
+   
+});
+      </script>
+      
+      <style>
+         
+
+         body {
+  color: #83868a;
+  background-color: #f1f3f6;
+  font-family: "Roboto", sans-serif; font-size: 14px;
+  
+}
+
+.container {
+  max-width: 960px;
+}
+
+.panel-default>.panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #e4e5e7;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.panel-default>.panel-heading a {
+  display: block;
+  padding: 10px 15px;
+}
+
+.panel-default>.panel-heading a:after {
+  content: "";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"] {
+  background-color: #eee;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"]:after {
+  content: "\2212";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.panel-default>.panel-heading a[aria-expanded="false"]:after {
+  content: "\002b";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.accordion-option {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin: 15px 0;
+}
+
+.accordion-option .title {
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-option .toggle-accordion {
+  float: right;
+  font-size: 16px;
+  color: #6a6c6f;
+}
+/*
+.accordion-option .toggle-accordion:before {
+  content: "Expand All";
+}
+
+.accordion-option .toggle-accordion.active:before {
+  content: "Collapse All";
+}
+*/
+      </style>
+   </head>
+   <body>
+      <nav class="navbar navbar-dark bg-dark">
+         <a class="navbar-brand" href="index.html">FCS Python Overview</a>
+      </nav>
+      <div class="container-fluid text-center">
+      <div class="row content">
+      <div class="col-sm-12 text-left">
+      <div class="intro mt-2">
+         <p>The list below aims to give an overview about the Data Types, Functions etc. that have been used in the assignments of the course Fundamentals of Computer Science, spring term 2020.<br>
+            Please note that this list may is not complete and therefore no guarantee can be given.
+            <br>
+            <br>
+            &copy Janick Spirig, May 2020
+         </p>
+      </div>
+      <div class="container">
+        <div class="accordion-option">
+          <h3 class="title"></h3>
+          <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
+        </div>
+        <div class="clearfix"></div>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Data Types
+              </a>
+            </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+                <ul>
+                    <li>
+                       Numeric
+                       <ul>
+                          <li>Integer</li>
+                          <li>Float</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Iterables
+                       <ul>
+                          <li>
+                             String
+                             <ul>
+                                <li>.split()</li>
+                                <li>.strip()</li>
+                                <li>.upper()</li>
+                                <li>.lower()</li>
+                             </ul>
+                          </li>
+                          <li>Tuple</li>
+                          <li>
+                             List
+                             <ul>
+                                <li>.append()</li>
+                                <li>.extend()</li>
+                                <li>.index()</li>
+                                <li>.sort()</li>
+                             </ul>
+                          </li>
+                          <li>
+                             Set
+                             <ul>
+                                <li>.add()</li>
+                             </ul>
+                          </li>
+                          <li>
+                             Dictionary
+                             <ul>
+                                <li>.iteritems()</li>
+                                <li>.keys()</li>
+                                <li>.values()</li>
+                             </ul>
+                          </li>
+                          <li>Range</li>
+                       </ul>
+                    </li>
+                    <li>Boolean</li>
+                    <li>
+                       Datetime
+                       <ul>
+                          <li>.strftime()</li>
+                          <li>.fromtimestamp()</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Graph (NetworkX)
+                       <ul>
+                          <li>.edges</li>
+                          <li>.all_neighbors()</li>
+                          <li>.shortest_psth()</li>
+                          <li>
+                             Exceptions
+                             <ul>
+                                <li>NetworkXNoPath</li>
+                                <li>NodeNotFound</li>
+                             </ul>
+                          </li>
+                       </ul>
+                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Mathematical operations
+              </a>
+            </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                <ul>  
+                    <li>%</li>
+                    <li>//</li>
+                    <li>/</li>
+                    <li>*</li>
+                    <li>+</li>
+                    <li>-</li>
+                    <li>==</li>
+                    <li>=</li>
+                    <li>&gt;&nbsp;</li>
+                    <li>&lt;&nbsp;</li>
+                    <li>+=</li>
+                    <li>-=</li>
+           </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="flase" aria-controls="collapseThree">
+                Loops
+              </a>
+            </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body">
+                <ul>
+                    <li>for loop</li>
+                    <li>for-each loop</li>
+                    <li>while loop</li>
+                    <li>break statement</li>
+                    <li>continue statement</li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFour">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="flase" aria-controls="collapseFour">
+                Functions
+              </a>
+            </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+              <div class="panel-body">
+                <ul>
+                    <li>type()</li>
+                    <li>bool()</li>
+                    <li>map()</li>
+                    <li>reduce()</li>
+                    <li>filter()</li>
+                    <li>sorted()</li>
+                    <li>max()</li>
+                    <li>min()</li>
+                    <li>isinstance()</li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFive">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="flase" aria-controls="collapseFive">
+                Exceptions
+              </a>
+            </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+              <div class="panel-body">
+                <ul>
+                    <li>Define custom exception</li>
+                    <li>Raise exception</li>
+                    <li>Catch exception</li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingSix">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="flase" aria-controls="collapseSix">
+                OOP
+              </a>
+            </h4>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+              <div class="panel-body">
+                <ul>
+                    <li>Class variables</li>
+                    <li>
+                    Special methods
+                    <ul>
+                        <li>
+                            Rich comparison methods
+                            <ul>
+                                <li>__bool__()</li>
+                                <li>__lt__()</li>
+                                <li>__le__()</li>
+                                <li>__eq__()</li>
+                                <li>__gt__()</li>
+                                <li>__ge__()</li>
+                            </ul>
+                        </li>
+                        <li>Constructor __init__()</li>
+                        <li>Print statement __str__()</li>
+                    </ul>
+                    </li>
+                    <li>Create new class instance</li>
+                    <li>Access attribute values of class instance</li>
+                    <li>Execute function on class instance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingSeven">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="flase" aria-controls="collapseSeven">
+                UDP sockets
+              </a>
+            </h4>
+            </div>
+            <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+              <div class="panel-body">
+                <ul>
+                    <li>
+                       Create a socket
+                       <ul>
+                          <li>Socket()</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Bind IP address and port to socket
+                       <ul>
+                          <li>.bind()</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Listen for incoming messages from clients
+                       <ul>
+                          <li>.recvfrom()</li>
+                          <li>.recv()</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Send message to client
+                       <ul>
+                          <li>.sendto()</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Decode / Encode bytes
+                       <ul>
+                          <li>.encode()</li>
+                          <li>.decode()</li>
+                       </ul>
+                    </li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingEight">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="flase" aria-controls="collapseEight">
+                HTTP Requests
+              </a>
+            </h4>
+            </div>
+            <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+              <div class="panel-body">
+                <ul>
+                    <li>
+                       Send an HTTP request
+                       <ul>
+                          <li>Get</li>
+                          <li>Post</li>
+                          <li>Delete</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Check the status code of a response
+                       <ul>
+                          <li>.status_code</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Convert JSON response to dictionary
+                       <ul>
+                          <li>.json()</li>
+                       </ul>
+                    </li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingNine">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="flase" aria-controls="collapseNine">
+                Pandas
+              </a>
+            </h4>
+            </div>
+            <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+              <div class="panel-body">
+                <ul>
+                    <li>
+                       Create DataFrame using a
+                       <ul>
+                          <li>Dictionary</li>
+                          <li>List of iterables</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Select cells
+                       <ul>
+                          <li>Column based</li>
+                          <li>
+                             Row based
+                             <ul>
+                                <li>.loc[]</li>
+                                <li>.iloc[]</li>
+                             </ul>
+                          </li>
+                          <li>Boolean expression</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Calculate the quantile value
+                       <ul>
+                          <li>.quantile()</li>
+                       </ul>
+                    </li>
+                    <li>Change column order</li>
+                    <li>
+                       Iterate over dataframe
+                       <ul>
+                          <li>.iterrows()</li>
+                       </ul>
+                    </li>
+                    <li>Plot a dataframe</li>
+                    <li>
+                       Convert the values in a column to another datatype
+                       <ul>
+                          <li>.astype()</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Delete a column in the DataFrame
+                       <ul>
+                          <li>.pop()</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Calculate the mean for all values in a row or column
+                       <ul>
+                          <li>.mean()</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Merge two DataFrames
+                       <ul>
+                          <li>
+                             .merge()
+                             <ul>
+                                <li>left</li>
+                                <li>right</li>
+                                <li>inner</li>
+                                <li>outer</li>
+                             </ul>
+                          </li>
+                          <li>Add a new column to a DataFrame</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Read data into a DataFrame
+                       <ul>
+                          <li>
+                             From a csv file
+                             <ul>
+                                <li>.read_csv()</li>
+                             </ul>
+                          </li>
+                          <li>
+                             From another file format (e.g. .txt)
+                             <ul>
+                                <li>open()</li>
+                                <li>.readlines()</li>
+                             </ul>
+                          </li>
+                       </ul>
+                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTen">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="flase" aria-controls="collapseTen">
+                Matplotlib
+              </a>
+            </h4>
+            </div>
+            <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+              <div class="panel-body">
+                <ul>
+                    <li>
+                       Create bar chart
+                       <ul>
+                          <li>.bar()</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Line chart
+                       <ul>
+                          <li>.plot()</li>
+                          <li>.fill_between()</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Create a plot of subplots
+                       <ul>
+                          <li>.subplots()</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Create a scatter diagram
+                       <ul>
+                          <li>.scatter()</li>
+                       </ul>
+                    </li>
+                    <li>Define labels</li>
+                    <li>
+                       Add a legend
+                       <ul>
+                          <li>.legend()</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Access and rotate axis labels
+                       <ul>
+                          <li>.gca()</li>
+                          <li>.get_ticklabels()</li>
+                          <li>.set_rotation()</li>
+                       </ul>
+                    </li>
+                 </ul>
+
+
+
+
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingEleven">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="flase" aria-controls="collapseEleven">
+                Various
+              </a>
+            </h4>
+            </div>
+            <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+              <div class="panel-body">
+                <ul>
+                    <li>Lambda functions</li>
+                    <li>List comprehensions</li>
+                    <li>Slicing over iterables</li>
+                    <li>
+                       Insert variable values into string
+                       <ul>
+                          <li>.format()</li>
+                       </ul>
+                    </li>
+                    <li>
+                       Create random number
+                       <ul>
+                          <li>randrange()</li>
+                       </ul>
+                    </li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+   </body>
+</html>
