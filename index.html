@@ -12,31 +12,33 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       
       <script type="text/javascript">
-          $(document).ready(function() {
+        
+        $(document).ready(function() {
 
-$(".toggle-accordion").on("click", function() {
-  var accordionId = $(this).attr("accordion-id"),
-    numPanelOpen = $(accordionId + ' .collapse.in').length;
-  
-  $(this).toggleClass("active");
+            $(".toggle-accordion").on("click", function() {
+                var accordionId = $(this).attr("accordion-id"),
+                numPanelOpen = $(accordionId + ' .collapse.in').length;
+                $(this).toggleClass("active");
 
-  if (numPanelOpen == 0) {
-    openAllPanels(accordionId);
-  } else {
-    closeAllPanels(accordionId);
-  }
-})
+            if (numPanelOpen == 0) {
+                openAllPanels(accordionId);
+            } else {
+                closeAllPanels(accordionId);
+            }
+            })
 
-openAllPanels = function(aId) {
-  console.log("setAllPanelOpen");
-  $(aId + ' .panel-collapse:not(".in")').collapse('show');
-}
-closeAllPanels = function(aId) {
-  console.log("setAllPanelclose");
-  $(aId + ' .panel-collapse.in').collapse('hide');
-}
+            openAllPanels = function(aId) {
+                console.log("setAllPanelOpen");
+                $(aId + ' .panel-collapse:not(".in")').collapse('show');
+            }
+            
+            closeAllPanels = function(aId) {
+                console.log("setAllPanelclose");
+                $(aId + ' .panel-collapse.in').collapse('hide');
+            }
    
-});
+        });
+
       </script>
       
       <style>
@@ -267,7 +269,7 @@ closeAllPanels = function(aId) {
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingThree">
               <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="flase" aria-controls="collapseThree">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 Loops
               </a>
             </h4>
@@ -287,7 +289,7 @@ closeAllPanels = function(aId) {
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingFour">
               <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="flase" aria-controls="collapseFour">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 Functions
               </a>
             </h4>
@@ -311,7 +313,7 @@ closeAllPanels = function(aId) {
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingFive">
               <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="flase" aria-controls="collapseFive">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                 Exceptions
               </a>
             </h4>
@@ -329,7 +331,7 @@ closeAllPanels = function(aId) {
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingSix">
               <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="flase" aria-controls="collapseSix">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                 OOP
               </a>
             </h4>
@@ -366,7 +368,7 @@ closeAllPanels = function(aId) {
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingSeven">
               <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="flase" aria-controls="collapseSeven">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                 UDP sockets
               </a>
             </h4>
@@ -413,7 +415,7 @@ closeAllPanels = function(aId) {
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingEight">
               <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="flase" aria-controls="collapseEight">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
                 HTTP Requests
               </a>
             </h4>
@@ -448,7 +450,7 @@ closeAllPanels = function(aId) {
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingNine">
               <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="flase" aria-controls="collapseNine">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
                 Pandas
               </a>
             </h4>
@@ -548,7 +550,7 @@ closeAllPanels = function(aId) {
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingTen">
               <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="flase" aria-controls="collapseTen">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
                 Matplotlib
               </a>
             </h4>
@@ -597,17 +599,13 @@ closeAllPanels = function(aId) {
                        </ul>
                     </li>
                  </ul>
-
-
-
-
               </div>
             </div>
           </div>
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingEleven">
               <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="flase" aria-controls="collapseEleven">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
                 Various
               </a>
             </h4>
