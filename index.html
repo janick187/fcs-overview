@@ -7,15 +7,17 @@
       <title>FCS Overview</title>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       
 
       <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
       <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
       <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
       <link rel="manifest" href="site.webmanifest">
+
+      <link href="http://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
 
       <script type="text/javascript">
         
@@ -59,6 +61,10 @@
 
 .container {
   max-width: 960px;
+}
+
+.panel-body {
+   font-family: 'Menlo', sans-serif;
 }
 
 .panel-default>.panel-heading {
@@ -145,17 +151,17 @@ html {
    </head>
    <body>
       <nav class="navbar navbar-dark bg-dark">
-         <a class="navbar-brand" href="index.html">FCS Python Overview</a>
+         <a class="navbar-brand" href="index.html">FCS - All methods you should know</a>
       </nav>
       <div class="container-fluid text-center">
       <div class="row content">
       <div class="col-sm-12 text-left">
       <div class="intro mt-2">
-         <p>The list below aims to give an overview about the Data Types, Functions etc. that have been used in the assignments of the course Fundamentals of Computer Science, spring term 2020.<br>
+         <p>The list below aims to give an overview about all methods that have been used in the notebooks and assigments of the course Fundamentals of Computer Science (FCS) autumn term 2021.<br>
             Please note that this list may is not complete and therefore no guarantee can be given.
             <br>
             <br>
-            &copy Janick Spirig, May 2020
+            &copy <a href='https://linkedin.com/in/janick-spirig-4b59ba103/'>Janick Spirig</a>, January 2022
          </p>
       </div>
       <div class="container">
@@ -169,7 +175,7 @@ html {
             <div class="panel-heading" role="tab" id="headingOne">
               <h4 class="panel-title">
               <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                Data Types
+                Data types
               </a>
             </h4>
             </div>
@@ -179,8 +185,8 @@ html {
                     <li>
                        Numeric
                        <ul>
-                          <li>Integer</li>
-                          <li>Float</li>
+                          <li>integer</li>
+                          <li>float</li>
                        </ul>
                     </li>
                     <li>
@@ -202,14 +208,25 @@ html {
                                 <li>.append()</li>
                                 <li>.extend()</li>
                                 <li>.index()</li>
+                                <li>.insert()</li>
+                                <li>.reverse()</li>
+                                <li>.all()</li>
                                 <li>.sort()</li>
+                                <li>sorted()</li>
                                 <li>.copy()</li>
+                                <li>.any()</li>
+                                <li>.clear()</li>
+                                <li>del</li>
                              </ul>
                           </li>
                           <li>
                              Set
                              <ul>
                                 <li>.add()</li>
+                                <li>.union()</li>
+                                <li>.intersection()</li>
+                                <li>.difference()</li>
+                                <li>.symetric_difference()</li>
                              </ul>
                           </li>
                           <li>
@@ -218,6 +235,7 @@ html {
                                 <li>.items()</li>
                                 <li>.keys()</li>
                                 <li>.values()</li>
+                                <li>.get()</li>
                              </ul>
                           </li>
                           <li>Range</li>
@@ -231,20 +249,6 @@ html {
                           <li>.fromtimestamp()</li>
                        </ul>
                     </li>
-                    <li>
-                       Graph (NetworkX)
-                       <ul>
-                          <li>.edges</li>
-                          <li>.all_neighbors()</li>
-                          <li>.shortest_psth()</li>
-                          <li>
-                             Exceptions
-                             <ul>
-                                <li>NetworkXNoPath</li>
-                                <li>NodeNotFound</li>
-                             </ul>
-                          </li>
-                       </ul>
                  </ul>
               </div>
             </div>
@@ -252,7 +256,7 @@ html {
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingTwo">
               <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 Mathematical operations
               </a>
             </h4>
@@ -264,14 +268,13 @@ html {
                     <li>//</li>
                     <li>/</li>
                     <li>*</li>
+                    <li>**</li>
                     <li>+</li>
                     <li>-</li>
                     <li>==</li>
                     <li>=</li>
                     <li>&gt;&nbsp;</li>
                     <li>&lt;&nbsp;</li>
-                    <li>+=</li>
-                    <li>-=</li>
            </ul>
               </div>
             </div>
@@ -280,62 +283,21 @@ html {
             <div class="panel-heading" role="tab" id="headingThree">
               <h4 class="panel-title">
               <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Loops
+                Augmented assignments
               </a>
             </h4>
             </div>
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
               <div class="panel-body">
-                <ul>
-                    <li>for loop</li>
-                    <li>for-each loop</li>
-                    <li>while loop</li>
-                    <li>break statement</li>
-                    <li>continue statement</li>
-                 </ul>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingFour">
-              <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                Functions
-              </a>
-            </h4>
-            </div>
-            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-              <div class="panel-body">
-                <ul>
-                    <li>type()</li>
-                    <li>bool()</li>
-                    <li>map()</li>
-                    <li>reduce()</li>
-                    <li>filter()</li>
-                    <li>sorted()</li>
-                    <li>max()</li>
-                    <li>min()</li>
-                    <li>isinstance()</li>
-                    <li>input()</li>
-                 </ul>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingFive">
-              <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                Exceptions
-              </a>
-            </h4>
-            </div>
-            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-              <div class="panel-body">
-                <ul>
-                    <li>Define custom exception</li>
-                    <li>Raise exception</li>
-                    <li>Catch exception</li>
-                 </ul>
+                <ul>  
+                    <li>+=</li>
+                    <li>-=</li>
+                    <li>*=</li>
+                    <li>**=</li>
+                    <li>/=</li>
+                    <li>//=</li>
+                    <li>%=</li>
+           </ul>
               </div>
             </div>
           </div>
@@ -350,111 +312,15 @@ html {
             <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
               <div class="panel-body">
                 <ul>
-                    <li>
-                    Special methods
-                    <ul>
-                        <li>
-                            Rich comparison methods
-                            <ul>
-                                <li>__bool__()</li>
-                                <li>__lt__()</li>
-                                <li>__le__()</li>
-                                <li>__eq__()</li>
-                                <li>__gt__()</li>
-                                <li>__ge__()</li>
-                            </ul>
-                        </li>
-                        <li>Constructor __init__()</li>
-                        <li>Print statement __str__()</li>
-                    </ul>
-                    </li>
-                    <li>Create new class instance</li>
-                    <li>Access attribute values of class instance</li>
-                    <li>Execute function on class instance</li>
-                    <li>Class variables</li>
+                  <li>__repr__()</li>
+                  <li>__str__()</li>
+                  <li>__init__()</li>
+                  <li>super().__init__()</li>
+                  <li>@property</li>
+                  <li>.setter</li>
+                  <li>isinstance()</li>
+                  <li>.issubclass()</li>
                 </ul>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingSeven">
-              <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                UDP sockets
-              </a>
-            </h4>
-            </div>
-            <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
-              <div class="panel-body">
-                <ul>
-                    <li>
-                       Create a socket
-                       <ul>
-                          <li>Socket()</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Bind IP address and port to socket
-                       <ul>
-                          <li>.bind()</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Listen for incoming messages from clients
-                       <ul>
-                          <li>.recvfrom()</li>
-                          <li>.recv()</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Send message to client
-                       <ul>
-                          <li>.sendto()</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Decode / Encode bytes
-                       <ul>
-                          <li>.encode()</li>
-                          <li>.decode()</li>
-                       </ul>
-                    </li>
-                 </ul>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingEight">
-              <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                HTTP Requests
-              </a>
-            </h4>
-            </div>
-            <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
-              <div class="panel-body">
-                <ul>
-                    <li>
-                       Send an HTTP request
-                       <ul>
-                          <li>Get</li>
-                          <li>Post</li>
-                          <li>Delete</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Check the status code of a response
-                       <ul>
-                          <li>.status_code</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Convert JSON response to dictionary
-                       <ul>
-                          <li>.json()</li>
-                       </ul>
-                    </li>
-                 </ul>
               </div>
             </div>
           </div>
@@ -469,91 +335,43 @@ html {
             <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
               <div class="panel-body">
                 <ul>
-                    <li>
-                       Create DataFrame using a
-                       <ul>
-                          <li>Dictionary</li>
-                          <li>List of iterables</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Select cells
-                       <ul>
-                          <li>Column based</li>
-                          <li>
-                             Row based
-                             <ul>
-                                <li>.loc[]</li>
-                                <li>.iloc[]</li>
-                             </ul>
-                          </li>
-                          <li>Boolean expression</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Calculate the quantile value
-                       <ul>
-                          <li>.quantile()</li>
-                       </ul>
-                    </li>
-                    <li>Change column order</li>
-                    <li>
-                       Iterate over dataframe
-                       <ul>
-                          <li>.iterrows()</li>
-                       </ul>
-                    </li>
-                    <li>Plot a dataframe</li>
-                    <li>
-                       Convert the values in a column to another datatype
-                       <ul>
-                          <li>.astype()</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Delete a column in the DataFrame
-                       <ul>
-                          <li>.pop()</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Calculate the mean for all values in a row or column
-                       <ul>
-                          <li>.mean()</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Merge two DataFrames
-                       <ul>
-                          <li>
-                             .merge()
-                             <ul>
-                                <li>left</li>
-                                <li>right</li>
-                                <li>inner</li>
-                                <li>outer</li>
-                             </ul>
-                          </li>
-                          <li>Add a new column to a DataFrame</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Read data into a DataFrame
-                       <ul>
-                          <li>
-                             From a csv file
-                             <ul>
-                                <li>.read_csv()</li>
-                             </ul>
-                          </li>
-                          <li>
-                             From another file format (e.g. .txt)
-                             <ul>
-                                <li>open()</li>
-                                <li>.readlines()</li>
-                             </ul>
-                          </li>
-                       </ul>
+                  <li>.loc[]</li>
+                  <li>.iloc[]</li>
+                  <li>.isnan()</li>
+                  <li>.drop()</li>
+                  <li>.dropna()</li>
+                  <li>.read_csv()</li>
+                  <li>.rename()</li>
+                  <li>.where()</li>
+                  <li>.head()</li>
+                  <li>.index()</li>
+                  <li>.reset_index()</li>
+                  <li>.unique()</li>
+                  <li>.value_counts()</li>
+                  <li>.sort_index()</li>
+                  <li>.sort_values()</li>
+                  <li>.min()</li>
+                  <li>.max()</li>
+                  <li>.idxmin()</li>
+                  <li>.idxmax()</li>
+                  <li>.iat[]</li>
+                  <li>.at[]</li>
+                  <li>.join()</li>
+                  <li>.groupby()</li>
+                  <li>.apply()</li>
+                  <li>.get_group()</li>
+                  <li>.agg()</li>
+                  <li>.melt()</li>
+                  <li>.pivot()</li>
+                  <li>.get_dummies()</li>
+                  <li>.cut()</li>
+                  <li>.gut()</li>
+                  <li>.astype()</li>
+                  <li>.timestamp()</li>
+                  <li>.timedelta()</li>
+                  <li>.asfreq()</li>
+                  <li>.period()</li>
+                  <li>.to_datetime()</li>
                  </ul>
               </div>
             </div>
@@ -569,46 +387,19 @@ html {
             <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
               <div class="panel-body">
                 <ul>
-                    <li>
-                       Create bar chart
-                       <ul>
-                          <li>.bar()</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Create a Line chart
-                       <ul>
-                          <li>.plot()</li>
-                          <li>.fill_between()</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Create a plot of subplots
-                       <ul>
-                          <li>.subplots()</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Create a scatter diagram
-                       <ul>
-                          <li>.scatter()</li>
-                       </ul>
-                    </li>
-                    <li>Define labels</li>
-                    <li>
-                       Add a legend
-                       <ul>
-                          <li>.legend()</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Access and rotate axis labels
-                       <ul>
-                          <li>.gca()</li>
-                          <li>.get_ticklabels()</li>
-                          <li>.set_rotation()</li>
-                       </ul>
-                    </li>
+                     <li>.bar()</li>
+                     <li>.plot()</li>
+                     <li>.fill_between()</li>
+                     <li>.subplots()</li>
+                     <li>.scatter()</li>
+                     <li>.legend()</li>
+                     <li>.gca()</li>
+                     <li>.get_ticklabels()</li>
+                     <li>.set_rotation()</li>
+                     <li>.axis()</li>
+                     <li>.xlabel</li>
+                     <li>.ylabel</li>
+                     <li>.title</li>
                  </ul>
               </div>
             </div>
@@ -616,29 +407,133 @@ html {
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingEleven">
               <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                Various
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                Seaborn
               </a>
             </h4>
             </div>
             <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
               <div class="panel-body">
                 <ul>
-                    <li>Lambda functions</li>
-                    <li>List comprehensions</li>
-                    <li>Slicing over iterables</li>
-                    <li>
-                       Insert variable values into string
-                       <ul>
-                          <li>.format()</li>
-                       </ul>
-                    </li>
-                    <li>
-                       Create random number
-                       <ul>
-                          <li>randrange()</li>
-                       </ul>
-                    </li>
+                     <li>.scatterplot()</li>
+                     <li>.kdeplot()</li>
+                     <li>.regplot()</li>
+                     <li>.jointplot()</li>
+                     <li>.boxplot()</li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwelve">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                sklearn
+              </a>
+            </h4>
+            </div>
+            <div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+              <div class="panel-body">
+                <ul>
+                     <li>train_test_split()</li>
+                     <li>LinearSVC()</li>
+                     <li>KNeighborsClassifier()</li>
+                     <li>.fit()</li>
+                     <li>.predict()</li>
+                     <li>accuracy_score()</li>
+                     <li>precision_recall_fscore_support()</li>
+                     <li>classification_report()</li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThirteen">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                numpy
+              </a>
+            </h4>
+            </div>
+            <div id="collapseThirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+              <div class="panel-body">
+                <ul>
+                  <li>.dtype</li>
+                  <li>.ndim</li>
+                  <li>.shape</li>
+                  <li>.size</li>
+                  <li>.itemsize</li>
+                  <li>.flat</li>
+                  <li>.zeroes()</li>
+                  <li>.ones()</li>
+                  <li>.full()</li>
+                  <li>.arange()</li>
+                  <li>.linspace()</li>
+                  <li>.reshape()</li>
+                  <li>.sum()</li>
+                  <li>.min()</li>
+                  <li>.max()</li>
+                  <li>.mean()</li>
+                  <li>.std()</li>
+                  <li>.var()</li>
+                  <li>.bincount()</li>
+                  <li>.random.randint()</li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFourteen">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                SQL
+              </a>
+            </h4>
+            </div>
+            <div id="collapseFourteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourteen">
+              <div class="panel-body">
+                <ul>
+                     <li>SELECT</li>
+                     <li>WHERE</li>
+                     <li>COUNT()</li>
+                     <li>AVG()</li>
+                     <li>GROUP BY</li>
+                     <li>ORDER BY</li>
+                     <li>INNER JOIN</li>
+                     <li>REGEX</li>
+                     <li>INSERT INTO</li>
+                     <li>UPDATE</li>
+                     <li>DELETE</li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFifteen">
+              <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                Various
+              </a>
+            </h4>
+            </div>
+            <div id="collapseFifteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFifteen">
+              <div class="panel-body">
+                <ul>
+                     <li>range()</li>
+                     <li>enumerate()</li>
+                     <li>lambda()</li>
+                     <li>.map()</li>
+                     <li>.reduce()</li>
+                     <li>.filter()</li>
+                     <li>random.randrange()</li>
+                     <li>statistics.mean()</li>
+                     <li>statstics.median()</li>
+                     <li>statistics.mode()</li>
+                     <li>math.sqrt()</li>
+                     <li>math.fabs()</li>
+                     <li>math.pow()</li>
+                     <li>.status_code</li>
+                     <li>.json()</li>
                  </ul>
               </div>
             </div>
